@@ -166,7 +166,7 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
+  return arr.filter(char => !char.children);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -178,8 +178,19 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
-  // Solution code here...
+  const filteredArr = arr.filter(item => !(typeof(item) === 'string'));
+  return filteredArr.map(item => {
+    if (item % 2 === 0) {
+      return 'even';
+    } else {
+      return 'odd';
+    }
+  });
 };
+
+// const evenOddNumericValues = (arr) => arr.filter(item => !(typeof(item) === 'string'))
+//   .map(item => item % 2 === 0 ? 'even' : 'odd');
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -281,14 +292,14 @@ describe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return an array containing characters who do not have children', () => {
     expect(getCharactersWithoutChildren(characters)).toStrictEqual([{ name: 'Sansa', spouse: 'Tyrion', house: 'Stark' }, { name: 'Jon', spouse: null, house: 'Snow' }]);
     expect(getCharactersWithoutChildren(characters).length).toStrictEqual(2);
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should remove non-integers and return "even" or "odd', () => {
     expect(evenOddNumericValues(['Gregor', 2, 4, 1])).toStrictEqual(['even', 'even', 'odd']);
     expect(evenOddNumericValues(['Gregor', 2, 4, 1]).length).toStrictEqual(3);
