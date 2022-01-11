@@ -122,11 +122,9 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  let regex = /^[A-Ja-j]/g
-  const newArr = arr.filter(city => {
-    console.log(city, regex.test(city));
-   
-    return regex.test(city)});
+  let regex = /^[A-Ja-j]/
+  const newArr = arr.filter(city => regex.test(city));
+  console.log(newArr);
   return newArr
 };
 
