@@ -160,7 +160,11 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  if (board[row][col] === '#') {
+    return 'hit';
+  } else {
+    return 'miss';
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -172,7 +176,13 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  let finalNumbers = 1;
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = 0; j < numbers[i].length; j++) {
+      finalNumbers *= numbers[i][j];
+    }
+  }
+  return finalNumbers;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -192,7 +202,19 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  const weaklyAvgArr = [];
+  let counter = 0;
+  let numOfDays = 0;
+  for (let i = 0; i < weather.length; i++) {
+    for (let j = 0; j < weather[i].length; j++) {
+      counter += weather[i][j];
+      numOfDays = weather[i].length;
+    }
+    weaklyAvgArr.push(counter);
+    counter = 0;
+  }
+  const totalTemp = weaklyAvgArr.reduce((acc, val) => (acc + val));
+  return totalTemp / (weather.length * numOfDays);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -213,7 +235,17 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  const weaklyAvgArr = [];
+  let counter = 0;
+  for (let i = 0; i < weather.length; i++) {
+    for (let j = 0; j < weather[i].length; j++) {
+      counter += weather[i][j];
+    }
+    counter = counter / weather[i].length;
+    weaklyAvgArr.push(counter);
+    counter = 0;
+  }
+  return weaklyAvgArr.reduce((acc, val) => acc < val ? acc : val);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -296,7 +328,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const battleshipData = [
     ['#', ' ', '#', ' '],
     ['#', ' ', '#', ' '],
@@ -315,7 +347,7 @@ xdescribe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should multiply all the numbers together', () => {
     expect(calculateProduct([[1, 2], [3, 4], [5, 6]])).toStrictEqual(720);
   });
@@ -328,13 +360,13 @@ xdescribe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should calculate and return the average temperature of the data set', () => {
     expect(averageDailyTemperature(weeklyTemperatures)).toStrictEqual(60.25);
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should return the lowest weekly average temperature within the data set', () => {
     expect(lowestWeeklyAverage(weeklyTemperatures)).toStrictEqual(57);
     expect(lowestWeeklyAverage(lowestWeeklyTemperatureData)).toStrictEqual(46);
