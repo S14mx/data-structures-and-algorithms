@@ -158,9 +158,44 @@ Here is a sample board:
   ['X', 'O', 'X'],
 ];
 ------------------------------------------------------------------------------------------------ */
+// const helpCheck = (row1, col1, row2, col2, row3, col3, diag1, diag2) => {
+//   const x = 'XXX';
+//   const o = 'OOO';
+//   if ((row1.join('') === x) || (row1.join('') === o)) {
+//     return true;
+//   } else if (col1.join('') === x || col1.join('') === o) {
+//     return true;
+//   } else if (row2.join('') === x || row2.join('') === o) {
+//     return true;
+//   } else if (col2.join('') === x || col2.join('') === o) {
+//     return true;
+//   } else if (row3.join('') === x || row3.join('') === o) {
+//     return true;
+//   } else if (col3.join('') === x || col3.join('') === o) {
+//     return true;
+//   } else if (diag1.join('') === x || diag1.join('') === o) {
+//     return true;
+//   } else if (diag2.join('') === x || diag2.join('') === o) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+const isWinning = (combination) => combination.join('') === 'XXX' || combination.join('') === 'OOO';
+
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  const row1 = [board[0][0], board[0][1], board[0][2]];
+  const col1 = [board[0][0], board[1][0], board[2][0]];
+  const row2 = [board[1][0], board[1][1], board[1][2]];
+  const col2 = [board[0][1], board[1][1], board[2][1]];
+  const row3 = [board[2][0], board[2][1], board[2][2]];
+  const col3 = [board[0][2], board[1][2], board[2][2]];
+  const diag1 = [board[0][0], board[1][1], board[2][2]];
+  const diag2 = [board[2][0], board[1][1], board[0][2]];
+  const combinations = [row1, col1, row2, col2, row3, col3, diag1, diag2];
+  return combinations.some(combination => isWinning(combination));
 };
 
 /* ------------------------------------------------------------------------------------------------
