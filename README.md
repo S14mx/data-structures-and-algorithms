@@ -20,4 +20,4 @@ To run your tests
 
 ### 401 Data Structures, Code Challenges
 
-- [*Code challenge 01*](../data-structures-and-algorithms/python/code_challenges/array_reverse/README.md)
+- [*Code challenge 01*](./python/code_challenges/array_reverse/README.md)
