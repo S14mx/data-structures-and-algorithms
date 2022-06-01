@@ -4,3 +4,4 @@ __pycache__
 .vscode
 poetry.lock
 .idea
+/home/s14mx/projects/data-structures-and-algorithms/python/.venv
