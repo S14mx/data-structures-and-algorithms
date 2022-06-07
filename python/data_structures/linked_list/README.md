@@ -38,8 +38,8 @@ Adds a new node with the given new value immediately before the first node that 
 `insert after`
 Arguments: value, new value
 Returns: nothing
-Adds a new node with the given new value immediately after the first node that has the value specified  
+Adds a new node with the given new value immediately after the first node that has the value specified
 
-![Whiteboard screenshot](https://github.com/S14mx/data-structures-and-algorithms/blob/linked-list-insertions/python/data_structures/linked_list/imgs/linked-list-insertions.png "Whiteboard process")
+![Whiteboard screenshot](https://github.com/S14mx/data-structures-and-algorithms/blob/main/python/data_structures/linked_list/imgs/linked_list_insertions.png "Whiteboard process")
 
 - [*Link to code*](./linked_list.py)
