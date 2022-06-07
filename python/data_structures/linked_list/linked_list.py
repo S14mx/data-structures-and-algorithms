@@ -1,3 +1,8 @@
+from tokenize import Name
+from unicodedata import name
+from pip import main
+
+
 class LinkedList:
     """
     Linked list class
@@ -30,6 +35,15 @@ class LinkedList:
         output_string += "NULL"
         return output_string
 
+    def append(new_value):
+        pass
+
+    def insert_before(value, new_value):
+        pass
+
+    def insert_after(value, new_value):
+        pass
+
 
 class Node:
     """
@@ -40,7 +54,3 @@ class Node:
     def __init__(self, value, next=None):
         self.value = value
         self.next = next
-
-
-class TargetError:
-    pass
