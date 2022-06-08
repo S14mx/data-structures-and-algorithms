@@ -1,6 +1,6 @@
-from tokenize import Name
-from unicodedata import name
-from pip import main
+
+class TargetError(Exception):
+    pass
 
 
 class LinkedList:
@@ -35,14 +35,47 @@ class LinkedList:
         output_string += "NULL"
         return output_string
 
-    def append(new_value):
-        pass
+    def append(self, value):
+        new_node = Node(value)
+        current = self.head
+        while current:
+            if current.next == None:
+                current.next = new_node
+                break
+            current = current.next
 
-    def insert_before(value, new_value):
-        pass
+    def insert_before(self, value, new_value):
+        try:
+            new_node = Node(new_value)
+            current = self.head
+            if current == None:
+                raise TargetError
+            while current:
+                if current.value == value:
+                    new_node.next = current
+                    self.head = new_node
+                elif current.next.value == value:
+                    new_node.next = current.next
+                    current.next = new_node
+                    break
+                current = current.next
+        except:
+            raise TargetError
 
-    def insert_after(value, new_value):
-        pass
+    def insert_after(self, value, new_value):
+        try:
+            new_node = Node(new_value)
+            current = self.head
+            if current.next == None:
+                raise TargetError
+            while current:
+                if current.value == value:
+                    new_node.next = current.next
+                    current.next = new_node
+                    break
+                current = current.next
+        except:
+            raise TargetError
 
 
 class Node:
