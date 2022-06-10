@@ -25,3 +25,4 @@ To run your tests
 - [*Code challenge 03*](./python/code_challenges/array_binary_search/README.md)
 - [*Code challenge 05*](./python/data_structures/linked_list/README.md)
 - [*Code challenge 06*](./python/data_structures/linked_list/README.md)
+- [*Code challenge 07*](./python/data_structures/linked_list/README.md)

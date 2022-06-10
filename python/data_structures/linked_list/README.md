@@ -49,8 +49,18 @@ Adds a new node with the given new value immediately before the first node that 
 
 Arguments: value, new value
 Returns: nothing
-Adds a new node with the given new value immediately after the first node that has the value specified  
+Adds a new node with the given new value immediately after the first node that has the value specified
 
-![Whiteboard screenshot](https://github.com/S14mx/data-structures-and-algorithms/blob/main/python/data_structures/linked_list/imgs/linked_list_insertions.png "Whiteboard process")
+`kth from end`
+
+Arguments: integer(value)
+Returns: node's value at the given position in the linked list
+Returns k-th value from the end of a linked list.
+
+![Whiteboard screenshot challenge 06](https://github.com/S14mx/data-structures-and-algorithms/blob/main/python/data_structures/linked_list/imgs/linked_list_insertions.png "Whiteboard process")
+
+Code challenge 07 whiteboard:
+
+![Whiteboard screenshot challenge 07](https://github.com/S14mx/data-structures-and-algorithms/blob/main/python/data_structures/linked_list/imgs/linked_list_kth.png "Whiteboard process")
 
 - [*Link to code*](./linked_list.py)
