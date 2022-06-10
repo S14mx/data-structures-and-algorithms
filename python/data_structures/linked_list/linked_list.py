@@ -77,6 +77,9 @@ class LinkedList:
         except:
             raise TargetError
 
+    def kth_from_end(value):
+        pass
+
 
 class Node:
     """
