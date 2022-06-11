@@ -1,4 +1,5 @@
 
+
 class TargetError(Exception):
     pass
 
@@ -46,10 +47,10 @@ class LinkedList:
 
     def insert_before(self, value, new_value):
         try:
-            new_node = Node(new_value)
-            current = self.head
             if current == None:
                 raise TargetError
+            new_node = Node(new_value)
+            current = self.head
             while current:
                 if current.value == value:
                     new_node.next = current
@@ -64,10 +65,10 @@ class LinkedList:
 
     def insert_after(self, value, new_value):
         try:
-            new_node = Node(new_value)
-            current = self.head
             if current.next == None:
                 raise TargetError
+            new_node = Node(new_value)
+            current = self.head
             while current:
                 if current.value == value:
                     new_node.next = current.next
@@ -77,8 +78,21 @@ class LinkedList:
         except:
             raise TargetError
 
-    def kth_from_end(value):
-        pass
+    def kth_from_end(self, num):
+        if self.head == None:
+            raise TargetError
+        current = self.head
+        length = 0
+        while current:
+            length += 1
+            current = current.next
+        if num >= length or num < 0:
+            raise TargetError
+        length = length - (num + 1)
+        while length != 0 and self.head:
+            self.head = self.head.next
+            length -= 1
+        return self.head.value
 
 
 class Node:
@@ -90,3 +104,11 @@ class Node:
     def __init__(self, value, next=None):
         self.value = value
         self.next = next
+
+
+if __name__ == "__main__":
+    node3 = Node(3)
+    node2 = Node(2, node3)
+    node1 = Node(1, node2)
+    ll = LinkedList(node1)
+    ll.kth_from_end(3)
