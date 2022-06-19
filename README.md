@@ -27,3 +27,4 @@ To run your tests
 - [*Code challenge 06*](./python/data_structures/linked_list/README.md)
 - [*Code challenge 07*](./python/data_structures/linked_list/README.md)
 - [*Code challenge 08*](./python/code_challenges/linked_list_zip/README.md)
+- [*Code challenge 10*](./python/data_structures/stack_and_queue/README.md)
