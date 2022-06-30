@@ -29,3 +29,4 @@ To run your tests
 - [*Code challenge 08*](./python/code_challenges/linked_list_zip/README.md)
 - [*Code challenge 10*](./python/data_structures/stack_and_queue/README.md)
 - [*Code challenge 11*](./python/code_challenges/stack_queue_pseudo/README.md)
+- [*Code challenge 12*](./python/code_challenges/stack_queue_animal_shelter/README.md)
