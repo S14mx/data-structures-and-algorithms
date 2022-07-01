@@ -1,5 +1,5 @@
 import pytest
-from code_challenges.stack_queue_brackets import multi_bracket_validation
+from python.code_challenges.stack_queue_brackets.stack_queue_brackets import multi_bracket_validation
 
 
 @pytest.mark.skip("TODO")

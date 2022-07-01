@@ -4,7 +4,7 @@ Create a class called AnimalShelter which holds only dogs and cats. It must have
 
 ## Whiteboard Process
 
-![Whiteboard screenshot](https://github.com/S14mx/data-structures-and-algorithms/blob/stack-queue-animal-shelter/python/code_challenges/stack-queue-animal-shelter/imgs/stack-queue-animal-shelter.png "Whiteboard process")
+![Whiteboard screenshot](https://github.com/S14mx/data-structures-and-algorithms/blob/stack-queue-animal-shelter/python/code_challenges/stack_queue_animal_shelter/imgs/stack-queue-animal-shelter.png "Whiteboard process")
 
 ## Approach & Efficiency
 
