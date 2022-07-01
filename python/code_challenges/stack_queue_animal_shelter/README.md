@@ -13,6 +13,6 @@ Space: O(n) because we will be creating an extra Queue datastructure
 
 ## Solution
 
-- [*Link to code*](/python/code_challenges/stack-queue-animal-shelter/stack-queue-animal-shelter.py)
+- [*Link to code*](/python/code_challenges/stack_queue_animal_shelter/stack_queue_animal_shelter.py)
 
 
