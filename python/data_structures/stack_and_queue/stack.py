@@ -14,6 +14,8 @@ class Stack:
     def is_empty(self):
         if not self.top:
             return True
+        else:
+            return False
 
     def peek(self):
         if not self.top:
