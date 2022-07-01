@@ -8,8 +8,8 @@ Write a function called validate brackets that will validate whether or not the 
 
 ## Approach & Efficiency
 
-Time: O(1)  because we will be using 2 separate queues and retrieving first item from one of them with enqueue and dequeue methods that both have O(1) time complexity
-Space: O(n) because we will be creating an extra Queue datastructure
+Time: O(n) because we will be iterating through the input string
+Space: O(n) because we will be creating a new datastructure
 
 ## Solution
 
