@@ -14,7 +14,7 @@ def multi_bracket_validation(str):
             return False
         if letter in bracket_dict.keys():
             stack.push(letter)
-        if letter in bracket_dict.values() and letter == bracket_dict[stack.peek()]:
+        if letter == bracket_dict[stack.peek()]:
             stack.pop()
 
     return stack.is_empty()
