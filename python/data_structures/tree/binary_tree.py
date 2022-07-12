@@ -1,3 +1,4 @@
+
 class BinaryTree:
     """
     Binary Tree Data Structure
@@ -15,7 +16,6 @@ class BinaryTree:
                 return
 
             values.append(root.value)
-            self.max_value = max(self.max_value, root.value)
             if root.left is not None:
                 walk(root.left)
             if root.right is not None:
@@ -59,6 +59,8 @@ class BinaryTree:
 
         return values
 
+    # Using list from pre_order method
+
     # def find_maximum_value(self):
     #     values = self.pre_order()
     #     max_value = values[0]
@@ -66,6 +68,8 @@ class BinaryTree:
     #         if value > max_value:
     #             max_value = value
     #     return max_value
+
+    # Using BFT
 
     # def find_maximum_value(self):
     #     q = [self.root]
@@ -78,8 +82,26 @@ class BinaryTree:
     #             _max = max(_max, node.value)
     #     return _max
 
+    # Using modified pre_order method
+
+    # def find_maximum_value(self):
+    #     self.pre_order()
+    #     return self.max_value
+
+    # Creating new methods
+
+    def traverse(self, root):
+        if root is None:
+            return
+        if root.value > self.max_value:
+            self.max_value = root.value
+        if root.left is not None:
+            self.traverse(root.left)
+        if root.right is not None:
+            self.traverse(root.right)
+
     def find_maximum_value(self):
-        self.pre_order()
+        self.traverse(self.root)
         return self.max_value
 
 

@@ -32,7 +32,7 @@ returns an array of the values, ordered appropriately.
 * `find_maximum_value`
 
 Arguments: none
-Returns: number
+returns: number
 
 ### Binary Search Tree class has the following methods:
 
@@ -46,4 +46,4 @@ Adds a new node with that value in the correct location in the binary search tre
 Arguments: value
 returns boolean indicating whether or not the value is in the tree at least once.
 
-![Whiteboard screenshot challenge 16](https://github.com/S14mx/data-structures-and-algorithms/blob/main/python/data_structures/linked_list/imgs/linked_list_insert.png "Whiteboard process")
+![Whiteboard screenshot challenge 16](https://github.com/S14mx/data-structures-and-algorithms/blob/main/python/data_structures/tree/imgs/tree-max.png "Whiteboard process")
