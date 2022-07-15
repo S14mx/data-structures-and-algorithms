@@ -32,3 +32,5 @@ To run your tests
 - [*Code challenge 12*](./python/code_challenges/stack_queue_animal_shelter/README.md)
 - [*Code challenge 13*](./python/code_challenges/stack_queue_brackets/README.md)
 - [*Code challenge 15*](./python/data_structures/tree/README.md)
+- [*Code challenge 16*](./python/data_structures/tree/README.md)
+- [*Code challenge 17*](./python/code_challenges/tree_breadth_first/README.md)
