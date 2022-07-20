@@ -6,7 +6,9 @@ Set the values of each of the new nodes depending on the corresponding node valu
 
 ## Whiteboard Process
 
-![Whiteboard screenshot](https://github.com/S14mx/data-structures-and-algorithms/blob/tree-fizz-buzz/python/code_challenges/tree_fizz_buzz/imgs/tree_fizz_buzz.png "Whiteboard process")
+We collaborated with Jae and Pedro on the whiteboard
+
+![Whiteboard screenshot](https://github.com/S14mx/data-structures-and-algorithms/blob/tree-fizz-buzz/python/code_challenges/tree_fizz_buzz/imgs/fizz_buzz_tree.png "Whiteboard process")
 
 ## Approach & Efficiency
 
