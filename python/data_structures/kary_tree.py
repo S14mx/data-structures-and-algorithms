@@ -1,4 +1,4 @@
-from data_structures.queue import Queue
+from data_structures.stack_and_queue.queue import Queue
 
 
 class KaryTree:
@@ -24,6 +24,6 @@ class KaryTree:
 class Node:
     """K-Ary Tree Node"""
 
-    def __init__(self, value):
+    def __init__(self, value=None):
         self.value = value
         self.children = []
