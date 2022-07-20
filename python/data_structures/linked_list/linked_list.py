@@ -13,6 +13,9 @@ class LinkedList:
     def __init__(self, head=None):
         self.head = head
 
+    def __bool__(self):
+        return self.head != None
+
     def insert(self, value):
         new_node = Node(value)
         if self.head is not None:
