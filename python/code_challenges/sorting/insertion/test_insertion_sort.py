@@ -21,3 +21,21 @@ def test_insertion_sort3():
     actual = insertion_sort([2, 3, 5, 7, 13, 11])
     expected = [2, 3, 5, 7, 11, 13]
     assert actual == expected
+
+
+def test_insertion_sort_empty_list():
+    actual = insertion_sort([])
+    expected = []
+    assert actual == expected
+
+
+def test_insertion_sort_non_integers():
+    actual = insertion_sort([2, "3", 1])
+    expected = "Input list contains non-integers"
+    assert actual == expected
+
+
+def test_insertion_sort_one():
+    actual = insertion_sort([2])
+    expected = [2]
+    assert actual == expected
