@@ -4,7 +4,7 @@ Document your explanation of merge sort algorithm by creating a blog article tha
 
 # Whiteboard Process
 
-![Whiteboard screenshot](https://github.com/S14mx/data-structures-and-algorithms/blob/main/python/code_challenges/sorting/insertion/merge-sort.png "Whiteboard process")
+![Whiteboard screenshot](https://github.com/S14mx/data-structures-and-algorithms/blob/main/python/code_challenges/sorting/merge/merge-sort.png "Whiteboard process")
 
 # Approach & Efficiency
 
