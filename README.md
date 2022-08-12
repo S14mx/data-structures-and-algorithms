@@ -36,3 +36,4 @@ To run your tests
 - [*Code challenge 17*](./python/code_challenges/tree_breadth_first/README.md)
 - [*Code challenge 18*](./python/code_challenges/tree_fizz_buzz/README.md)
 - [*Code challenge 26*](./python/code_challenges/sorting/insertion/README.md)
+- [*Code challenge 27*](./python/code_challenges/sorting/merge/README.md)
