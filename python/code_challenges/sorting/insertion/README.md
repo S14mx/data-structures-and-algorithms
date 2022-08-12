@@ -13,4 +13,4 @@ Space: O(1)
 
 ## Solution
 
-- [*Link to code*](/python/code_challenges/sorting/insertion/insertion-sort.py)
+- [*Link to code*](/python/code_challenges/sorting/insertion/insertion_sort.py)
