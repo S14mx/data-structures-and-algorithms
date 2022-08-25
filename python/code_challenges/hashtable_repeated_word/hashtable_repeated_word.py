@@ -3,14 +3,21 @@ from data_structures.hash_table.hashtable import Hashtable
 
 def first_repeated_word(string):
     hash_table = Hashtable()
-    words = string.split()
-    for word in words:
+    words = string.lower().split()
+    # alpha_words = []
+    # for word in words:
+    #     alpha_word = ""
 
-        if hash_table.contains(word.lower()):
+    #     for letter in word:
+    #         if letter.isalpha():
+    #             alpha_word += letter
+    #     alpha_words.append(alpha_word)
+    alpha_words = (["".join([letter for letter in word if letter.isalpha()])
+                    for word in words])
+
+    for word in alpha_words:
+
+        if hash_table.contains(word):
             return word or None
         else:
-            hash_table.set(word.lower(), True)
-
-
-if __name__ == "__main__":
-    print(first_repeated_word("hello there hello"))
+            hash_table.set(word, True)
