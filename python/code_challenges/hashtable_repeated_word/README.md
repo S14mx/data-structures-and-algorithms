@@ -4,7 +4,7 @@ Find the first repeated word in a book
 
 ## Whiteboard Process
 
-![Whiteboard screenshot](<https://github.com/S14mx/data-structures-and-algorithms/blob/hashmap-repeated-word/python/code_challenges/hashtable_repeated_word/imgs/hashtable_repeated_word.png>"Whiteboard process")
+![Whiteboard screenshot](https://github.com/S14mx/data-structures-and-algorithms/blob/hashmap-repeated-word/python/code_challenges/hashtable_repeated_word/imgs/hashtable_repeated_word.png "Whiteboard process")
 
 ## Approach & Efficiency
 
