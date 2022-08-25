@@ -1,58 +1,95 @@
+from xmlrpc.client import Boolean
 from data_structures.linked_list.linked_list import LinkedList, Node
 
 
 class Hashtable:
     """
-    Put docstring here
+    Hash table data structure
     """
 
-    def __init__(self, size=1024):
+    def __init__(self, size=1024) -> None:
         self.size = size
         self._buckets = [None] * size
 
-    def set(self, key, value):
+    def set(self, key: str or int, value: any) -> None:
+        """ This method hashes the key, and adds the key and value pair to the table, in case of a collision the most recent key is added to the end of linked list
 
-        # set
-        # Arguments: key, value
-        # Returns: nothing
-        # This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
+            Arguments: key, value
+
+        """
+
+        if (type(key) != str) and (type(key) != int):
+            return "Only strings or integers are allowed as keys"
 
         node = Node({key: value})
         if not self._buckets[self.hash(key)]:
             self._buckets[self.hash(key)] = LinkedList(node)
         else:
             current = self._buckets[self.hash(key)].head
-            print(current.value)
             while current.next:
                 current = current.next
             current.next = node
 
-    def get(self, key):
-        pass
+            while current:
+                current = current.next
 
-        # get
-        # Arguments: key
-        # Returns: Value associated with that key in the table
+    def get(self, key: str) -> any:
+        """ Returns a value associated with the key in the table
 
-    def contains(self, key):
-        pass
+            Arguments: key
+        """
+        if type(key) != str and type(key) != int:
+            return "Only strings or integers are allowed as keys"
 
-        # contains
-        # Arguments: key
-        # Returns: Boolean, indicating if the key exists in the table already.
+        try:
+
+            current = self._buckets[self.hash(key)].head
+            while current:
+                if key in current.value.keys():
+                    return current.value[key]
+                current = current.next
+            return "Key is not found"
+
+        except:
+            return "Key is not found"
+
+    def contains(self, key: str) -> bool:
+        """Returns a Boolean, indicating if the key exists in the table already.
+
+        Arguments: key
+        """
+        if type(key) != str and type(key) != int:
+            return "Only strings or integers are allowed as keys"
+
+        try:
+
+            current = self._buckets[self.hash(key)].head
+            while current:
+                if key in current.value.keys():
+                    return True
+                current = current.next
+            return False
+
+        except:
+            return False
 
     def keys(self):
-        pass
+        collection = []
+        for item in self._buckets:
+            if item:
+                current = item.head
+                while current:
+                    collection += current.value.keys()
+                    current = current.next
+        return collection
 
-        # keys
-        # Returns: Collection of keys
-
-#     'roger' 10431 list: 1024
     def hash(self, key):
+        """Returns an Index in the collection for the given key
 
-        # hash
-        # Arguments: key
-        # Returns: Index in the collection for that key
+        Arguments: key
+        """
+        if type(key) != str and type(key) != int:
+            return "Only strings or integers are allowed as keys"
 
         hashed_key = 0
 
@@ -63,8 +100,3 @@ class Hashtable:
 
         hashed_key = primed % self.size
         return hashed_key
-
-
-if __name__ == "__main__":
-    table = Hashtable()
-    print(table.hash("hello"))
