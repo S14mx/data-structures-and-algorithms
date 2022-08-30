@@ -40,3 +40,4 @@ To run your tests
 - [*Code challenge 28*](./python/code_challenges/sorting/quick/README.md)
 - [*Code challenge 30*](./python/data_structures/hash_table/README.md)
 - [*Code challenge 31*](./python/code_challenges/hashtable_repeated_word/README.md)
+- [*Code challenge 32*](./python/code_challenges/tree_intersection/README.md)
