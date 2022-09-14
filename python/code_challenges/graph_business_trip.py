@@ -1,4 +1,4 @@
-from data_structures.graph import Graph
+from python.data_structures.graph.graph import Graph
 
 
 def direct_flights():
