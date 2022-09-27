@@ -33,6 +33,12 @@ Include the weight of the connection in the returned collection
 Arguments: none
 Returns the total number of nodes in the graph
 
+- `depth_first_search`
+Arguments: Vertex
+Returns: A collection of nodes in their pre-order depth-first traversal order
 
+Code Challenge 38 whiteboard:
+
+![Whiteboard screenshot challenge 38](https://github.com/S14mx/data-structures-and-algorithms/blob/main/python/data_structures/graph/imgs/graph-dfs.png "Whiteboard process")
 
 - [*Link to code*](./graph.py)
