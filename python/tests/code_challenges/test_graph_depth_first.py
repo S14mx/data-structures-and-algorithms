@@ -1,8 +1,8 @@
 import pytest
-from python.data_structures.graph.graph import Graph, Vertex
+from data_structures.graph.graph import Graph, Vertex
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_full(graph_and_root):
     graph, root = graph_and_root
     actual = graph.depth_first_search(root)
@@ -11,7 +11,7 @@ def test_full(graph_and_root):
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_empty():
     graph = Graph()
     node = Vertex("some other node")
@@ -20,7 +20,7 @@ def test_empty():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_island_empty():
     graph = Graph()
     lonely = graph.add_node("lonely")
@@ -29,7 +29,7 @@ def test_island_empty():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_island_crowded(graph):
     lonely = graph.add_node("lonely")
     actual = graph.depth_first_search(lonely)
@@ -37,7 +37,7 @@ def test_island_crowded(graph):
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_mates_crowded(graph):
     lady = graph.add_node("lady")
     the_tramp = graph.add_node("the tramp")

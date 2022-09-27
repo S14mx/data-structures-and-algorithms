@@ -78,6 +78,20 @@ class Graph:
 
                 return node.neighbors
 
+    def depth_first_search(self, node, visited=None):
+        if visited is None:
+            visited = []
+        if node.value in visited:
+            return
+        if node in self.adj_list:
+            visited.append(node.value)
+
+        for neighbor in node.neighbors:
+            if neighbor.vertex.value not in visited:
+                self.depth_first_search(neighbor.vertex, visited)
+
+        return visited
+
 
 class Vertex:
     """Vertex(node) class for Graph data structure
